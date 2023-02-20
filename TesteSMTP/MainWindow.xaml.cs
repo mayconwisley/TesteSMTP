@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TesteSMTP
 {
@@ -32,14 +20,18 @@ namespace TesteSMTP
             string smtp = TxtSmtp.Text.Trim();
             int porta = int.Parse(TxtPorta.Text.Trim());
 
-            bool ssl = CbSsl.IsChecked.Value;
-            bool credencial = CbCredencial.IsChecked.Value;
+            bool ssl = CbSsl.IsChecked.HasValue;
+            bool credencial = CbCredencial.IsChecked.HasValue;
 
-            Email EnviarEmail = new Email(smtp, porta, email, senha, ssl, credencial);
+            Email EnviarEmail = new(smtp, porta, email, senha, ssl, credencial);
 
             try
             {
-                EnviarEmail.EnviarEmail(TxtEmailDe.Text.Trim(), TxtEmailPara.Text.Trim(), TxtAssunto.Text.Trim(), TxtMensagem.Text.Trim());
+                string destinatario = TxtEmailPara.Text.Trim();
+                string assunto = TxtAssunto.Text.Trim();
+                string mensagem = TxtMensagem.Text.Trim();
+
+                EnviarEmail.EnviarEmail(email, destinatario, assunto, mensagem);
                 TxtStatys.Text = "Email enviado com sucesso.";
             }
             catch (Exception ex)

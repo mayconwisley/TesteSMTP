@@ -5,14 +5,14 @@ namespace TesteSMTP;
 
 public class Email
 {
-    private readonly string _smtp;
+    private readonly string? _smtp;
     private readonly int _porta;
-    private readonly string _email;
-    private readonly string _senha;
+    private readonly string? _email;
+    private readonly string? _senha;
     private readonly bool _ssl;
     private readonly bool _credencial;
 
-    public Email(string smtp, int porta, string email, string senha, bool ssl, bool credencial)
+    public Email(string? smtp, int porta, string? email, string? senha, bool ssl, bool credencial)
     {
         _smtp = smtp;
         _porta = porta;
@@ -22,12 +22,11 @@ public class Email
         _credencial = credencial;
     }
 
-    public void EnviarEmail(string remente, string destinatario, string assunto, string corpo)
+    public void EnviarEmail(string rementente, string destinatario, string? assunto, string? corpo)
     {
         try
         {
-
-            MailMessage mensage = new(remente, destinatario, assunto, corpo)
+            MailMessage mensage = new(rementente, destinatario, assunto, corpo)
             {
                 IsBodyHtml = true
             };
