@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TesteSMTP", "TesteSMTP\Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteSMTPConsole", "TesteSMTPConsole\TesteSMTPConsole.csproj", "{19085085-072D-4CFD-82B8-EA960B513067}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TesteSMTPConsole_3.5", "TesteSMTPConsole_3.5\TesteSMTPConsole_3.5.csproj", "{00FCF61E-DF5B-4DB8-847C-7121E426670E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{19085085-072D-4CFD-82B8-EA960B513067}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19085085-072D-4CFD-82B8-EA960B513067}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19085085-072D-4CFD-82B8-EA960B513067}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00FCF61E-DF5B-4DB8-847C-7121E426670E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00FCF61E-DF5B-4DB8-847C-7121E426670E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00FCF61E-DF5B-4DB8-847C-7121E426670E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00FCF61E-DF5B-4DB8-847C-7121E426670E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
